@@ -1,31 +1,41 @@
 #
 # Misc
 #
-timezone: America/Recife
+username: "talisoon"
 shell: /usr/bin/fish
-username: "{{ ansible_user_id }}"
+timezone: America/Recife
+
+home_dir: "/home/{{ username }}"
 
 #
 # Docker apps
 #
-#
-docker_dir: /opt/containers/data
-docker_compose_dir: /opt/containers/compose
+docker_dir:         "{{ home_dir }}/docker"
+docker_data_dir:    "{{ home_dir }}/docker/data"
+docker_compose_dir: "{{ home_dir }}/docker/composes"
+
+# Composes files
+services_source_ddsdr: "{{ playbook_dir }}"
+services_source_dir: "{{ playbook_dir }}/services"
 
 #
 # Packages
 #
 essential_packages:
+  - fish
+  - git
   - vim
   - htop
+  - tmux
   - speedtest-cli
   - stow
-  - git
-  - fish
   - exa
-  - tmux
+  - bat
   - lm-sensors
-  - cockpit
+  - tree
+  - wget
+  - curl
+  - traceroute
 
 extra_packages:
   - neofetch

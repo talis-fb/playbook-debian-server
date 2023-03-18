@@ -1,0 +1,20 @@
+---
+- name: Here we go...
+  hosts: homelab
+
+  roles:
+    - system/packages
+    - role: geerlingguy.docker
+      become: true
+
+
+    - system/user
+    - system/machine
+
+
+    - containers/setup
+    - containers/portainer
+    - containers/heimdall
+
+
+    # - geerlingguy.security

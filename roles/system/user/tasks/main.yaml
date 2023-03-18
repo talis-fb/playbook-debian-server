@@ -28,6 +28,7 @@
     - users
 
 - name: Insert user to groups
+  become: true
   user:
     name: "{{ username }}"
     groups:

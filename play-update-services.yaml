@@ -1,0 +1,7 @@
+---
+- name: Here we go...
+  hosts: homelab
+
+  roles:
+    - containers/portainer
+    - containers/heimdall
