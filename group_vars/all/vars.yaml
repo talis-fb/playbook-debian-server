@@ -1,0 +1,42 @@
+#
+# Misc
+#
+timezone: America/Recife
+shell: /usr/bin/fish
+username: "{{ ansible_user_id }}"
+
+#
+# Docker apps
+#
+#
+docker_dir: /opt/containers/data
+docker_compose_dir: /opt/containers/compose
+
+#
+# Packages
+#
+essential_packages:
+  - vim
+  - htop
+  - speedtest-cli
+  - stow
+  - git
+  - fish
+  - exa
+  - tmux
+  - lm-sensors
+  - cockpit
+
+extra_packages:
+  - neofetch
+  - neovim
+
+#
+# SSH (geerlingguy.security)
+#
+# security_ssh_port: 69
+# security_sudoers_passwordless: ['{{ username }}']
+# security_autoupdate_reboot: true
+# security_autoupdate_mail_to: '{{ email }}'
+# security_autoupdate_reboot_time: '23:00'
+# security_autoupdate_mail_on_error: false

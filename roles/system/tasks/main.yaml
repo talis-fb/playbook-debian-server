@@ -1,0 +1,10 @@
+---
+- name: System - packages
+  include_tasks: packages.yaml
+
+- name: System - Docker (Galaxy Role)
+  include_role:
+    name: geerlingguy.docker
+
+- name: System - essential
+  include_tasks: essential.yaml

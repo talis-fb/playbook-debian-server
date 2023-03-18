@@ -1,0 +1,17 @@
+---
+- name: Here we go...
+  hosts: homelabs
+
+  # vars_prompt:
+  #   - name: password
+  #     prompt: Password to user ele
+  #     private: true
+
+  # TODO:
+  # REMOVE THIS
+  become: true
+
+  roles:
+    - system
+    # - geerlingguy.security
+    - services
