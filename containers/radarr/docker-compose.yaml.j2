@@ -10,8 +10,11 @@ services:
       - TZ={{ timezone }}
     volumes:
       - {{ docker_services_dir }}/radarr/config:/config
-      - {{ movie_dir }}:/movies #optional
-      - {{ download_dir }}:/downloads #optional
+      - {{ media_dir }}:/media
     ports:
       - 7878:7878
     restart: unless-stopped
+  
+# At UI...
+# 1 - Need to create root folder as /media/streaming/movies
+# 2 - Remap Download client in Remote Path with /downloads/ -> /media/torrents/

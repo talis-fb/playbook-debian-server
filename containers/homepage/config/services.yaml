@@ -31,6 +31,11 @@
         href: http://192.168.1.18:7878/
         icon: radarr.png
         container: radarr
+    
+    - Bazarr:
+        href: http://192.168.1.18:6767/
+        icon: bazarr.png
+        container: bazarr
 
     - Prowlarr:
         href: http://192.168.1.18:9696/

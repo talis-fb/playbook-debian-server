@@ -11,4 +11,5 @@
     - services/qbittorrent
     - services/radarr
     - services/prowlarr
+    - services/bazarr
     - services/jellyfin

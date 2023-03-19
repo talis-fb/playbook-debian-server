@@ -53,14 +53,18 @@ services:
   - radarr
   - jellyfin
   - prowlarr
+  - bazarr
 
 
 #
 # MEDIA SERVICES
 #
-download_dir: /media/download
-movie_dir:    /media/movies
-tv_dir:       /media/tv
+# About folder strucutre in media server
+# https://trash-guides.info/Hardlinks/How-to-setup-for/Docker/
+media_dir:     /media
+download_dir:  /media/torrents
+movie_dir:     /media/streaming/movies
+tv_dir:        /media/streaming/tv
 
 
 #
