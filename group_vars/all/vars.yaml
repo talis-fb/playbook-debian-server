@@ -51,6 +51,7 @@ services:
   - homepage
   - qbittorrent
   - radarr
+  - sonarr
   - jellyfin
   - prowlarr
   - bazarr

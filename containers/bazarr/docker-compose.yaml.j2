@@ -10,8 +10,7 @@ services:
       - TZ={{ timezone }}
     volumes:
       - {{ docker_services_dir }}/bazarr/config:/config
-      - {{ movie_dir }}:/movies
-      - {{ tv_dir }}:/tv
+      - {{ media_dir }}:/media
     ports:
       - 6767:6767
     restart: unless-stopped

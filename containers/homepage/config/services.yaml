@@ -32,6 +32,11 @@
         icon: radarr.png
         container: radarr
     
+    - Sonarr:
+        href: http://192.168.1.18:8989/
+        icon: sonarr.png
+        container: sonarr
+    
     - Bazarr:
         href: http://192.168.1.18:6767/
         icon: bazarr.png

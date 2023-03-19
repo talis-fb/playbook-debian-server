@@ -1,0 +1,20 @@
+---
+version: "3"
+services:
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ={{ timezone }}
+    volumes:
+      - {{ docker_services_dir }}/sonarr/config:/config
+      - {{ media_dir }}:/media
+    ports:
+      - 8989:8989
+    restart: unless-stopped
+  
+# At UI...
+# 1 - Need to create root folder as /media/streaming/tv
+# 2 - Remap Download client in Remote Path with /downloads/ -> /media/torrents/

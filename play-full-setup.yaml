@@ -20,6 +20,7 @@
     #Media
     - services/qbittorrent
     - services/radarr
+    - services/sonarr
     - services/prowlarr
     - services/bazarr
     - services/jellyfin
