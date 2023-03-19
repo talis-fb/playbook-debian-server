@@ -1,0 +1,21 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/services
+
+- Settings:
+    - Portainer:
+        href: https://192.168.1.18:9443/
+        icon: portainer.png
+    - Cockpit:
+        href: https://192.168.1.18:9090/
+        icon: cockpit.png
+
+- Media:
+    - Jellyfin:
+        href: http://localhost/
+        icon: jellyfin.png
+
+- External:
+    - Playbook:
+        href: https://github.com/talis-fb/playbook-debian-server
+        icon: github.png

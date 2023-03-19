@@ -1,0 +1,17 @@
+---
+- name: Install cockpit
+  package:
+    name: cockpit
+    state: present
+
+- name: Start cockpit service
+  become: true
+  service:
+    name: cockpit
+    state: started
+
+- name: Enable cockpit service
+  become: true
+  service:
+    name: cockpit
+    enabled: true

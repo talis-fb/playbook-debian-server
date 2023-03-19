@@ -5,3 +5,5 @@
   roles:
     - containers/portainer
     - containers/heimdall
+    - containers/cockpit
+    - containers/homepage

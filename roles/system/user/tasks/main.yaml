@@ -39,6 +39,7 @@
     append: true
 
 - name: Chmod the user home directory
+  become: true
   file:
     path: "/home/{{ username }}"
     state: directory

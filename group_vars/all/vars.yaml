@@ -41,6 +41,15 @@ essential_packages:
 extra_packages:
   - neofetch
   - neovim
+  - ranger
+
+#
+# Services
+#
+services:
+  - portainer
+  - heimdall
+  - homepage
 
 #
 # SSH (geerlingguy.security)
