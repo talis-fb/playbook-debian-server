@@ -6,3 +6,8 @@
     - services/portainer
     - services/cockpit
     - services/homepage
+
+    #Media
+    - services/qbittorrent
+    - services/radarr
+    - services/jellyfin

@@ -1,0 +1,17 @@
+---
+- name: Copy compose file
+  template:
+    src: "{{ containers_config_dir }}/qbittorrent/docker-compose.yaml.j2"
+    dest: "{{ docker_compose_dir }}/qbittorrent/docker-compose.yaml"
+
+- name: Make sure that the config folders exists
+  ansible.builtin.file:
+    path: "{{ docker_services_dir }}/qbittorrent/config"
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    state: directory
+
+- name: Setup compose file
+  docker_compose:
+    project_src: "{{ docker_compose_dir }}/qbittorrent"
+    state: present

@@ -15,6 +15,7 @@
       - docker-compose
 
 - name: Make sure that the docker folders exists
+  become: true
   ansible.builtin.file:
     path: "{{ item }}"
     owner: "{{ username }}"
@@ -24,6 +25,26 @@
     - "{{ docker_dir }}"
     - "{{ docker_compose_dir }}"
     - "{{ docker_services_dir }}"
+    - "{{ download_dir }}"
+    - "{{ movie_dir }}"
+    - "{{ tv_dir }}"
+
+- name: Chmod the docker directories
+  become: true
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: 0755
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    recurse: yes
+  loop: 
+    - "{{ docker_dir }}"
+    - "{{ docker_compose_dir }}"
+    - "{{ docker_services_dir }}"
+    - "{{ download_dir }}"
+    - "{{ movie_dir }}"
+    - "{{ tv_dir }}"
 
 - name: Make sure that the services - compose folders exists
   ansible.builtin.file:

@@ -12,8 +12,14 @@
 
 - Media:
     - Jellyfin:
-        href: http://localhost/
+        href: http://192.168.1.18:8096/
         icon: jellyfin.png
+    - Radarr:
+        href: http://192.168.1.18:7878/
+        icon: radarr.png
+    - Qbittorrent:
+        href: http://192.168.1.18:13000/
+        icon: qbittorrent.png
 
 - External:
     - Playbook:

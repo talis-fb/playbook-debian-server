@@ -49,6 +49,18 @@ services:
   - portainer
   - heimdall
   - homepage
+  - qbittorrent
+  - radarr
+  - jellyfin
+
+
+#
+# MEDIA SERVICES
+#
+download_dir: /media/download
+movie_dir:    /media/movies
+tv_dir:       /media/tv
+
 
 #
 # SSH (geerlingguy.security)
