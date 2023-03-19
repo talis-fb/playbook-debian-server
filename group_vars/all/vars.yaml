@@ -11,12 +11,11 @@ home_dir: "/home/{{ username }}"
 # Docker apps
 #
 docker_dir:         "{{ home_dir }}/docker"
-docker_data_dir:    "{{ home_dir }}/docker/data"
 docker_compose_dir: "{{ home_dir }}/docker/composes"
+docker_services_dir:    "{{ home_dir }}/docker/services"
 
 # Composes files
-services_source_ddsdr: "{{ playbook_dir }}"
-services_source_dir: "{{ playbook_dir }}/services"
+containers_config_dir: "{{ playbook_dir }}/containers"
 
 #
 # Packages

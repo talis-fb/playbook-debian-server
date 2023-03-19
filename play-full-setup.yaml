@@ -12,10 +12,10 @@
     - system/machine
 
 
-    - containers/setup
-    - containers/portainer
-    - containers/heimdall
-    - containers/cockpit
+    - services/setup
+    - services/portainer
+    - services/cockpit
+    - services/homepage
 
 
     # - geerlingguy.security

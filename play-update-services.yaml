@@ -3,7 +3,6 @@
   hosts: homelab
 
   roles:
-    - containers/portainer
-    - containers/heimdall
-    - containers/cockpit
-    - containers/homepage
+    - services/portainer
+    - services/cockpit
+    - services/homepage

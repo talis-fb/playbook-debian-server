@@ -22,8 +22,8 @@
     state: directory
   loop:
     - "{{ docker_dir }}"
-    - "{{ docker_data_dir }}"
     - "{{ docker_compose_dir }}"
+    - "{{ docker_services_dir }}"
 
 - name: Make sure that the services - compose folders exists
   ansible.builtin.file:
@@ -33,9 +33,9 @@
     state: directory
   loop: "{{ services }}"
 
-- name: Make sure that the services - data service folders exists
+- name: Make sure that the services - services folders exists
   ansible.builtin.file:
-    path: "{{ docker_data_dir }}/{{ item }}"
+    path: "{{ docker_services_dir }}/{{ item }}"
     owner: "{{ username }}"
     group: "{{ username }}"
     state: directory
