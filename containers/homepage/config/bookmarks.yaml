@@ -1,0 +1,16 @@
+---
+- Setup:
+    - Playbook Repo:
+        - href: https://github.com/talis-fb/playbook-debian-server
+          icon: github.png
+
+
+- External:
+    - Homer Service:
+        - href: https://gethomepage.dev/en/configs/services/
+          icon: homepage.png
+
+- External:
+    - Modules Ansible:
+        - href: https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
+          icon: ansible.png

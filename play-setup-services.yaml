@@ -11,4 +11,5 @@
     #Media
     - services/qbittorrent
     - services/radarr
+    - services/prowlarr
     - services/jellyfin

@@ -52,6 +52,7 @@ services:
   - qbittorrent
   - radarr
   - jellyfin
+  - prowlarr
 
 
 #
