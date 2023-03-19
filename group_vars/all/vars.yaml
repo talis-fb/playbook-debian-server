@@ -1,7 +1,7 @@
 #
 # Misc
 #
-username: "talisoon"
+username: "orangepi"
 shell: /usr/bin/fish
 timezone: America/Recife
 
@@ -36,6 +36,7 @@ essential_packages:
   - wget
   - curl
   - traceroute
+  - apparmor # Needed by docker in Debian
 
 extra_packages:
   - neofetch
