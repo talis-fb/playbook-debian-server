@@ -6,14 +6,16 @@
     ansible_user: "{{ lookup('env', 'USERNAME') }}"
 
   roles:
-    - services/portainer
-    - services/cockpit
+    # - services/portainer
+    # - services/cockpit
     - services/homepage
 
     #Media
-    - services/qbittorrent
-    - services/radarr
-    - services/sonarr
-    - services/prowlarr
-    - services/bazarr
-    - services/jellyfin
+    # - services/qbittorrent
+    # - services/radarr
+    # - services/sonarr
+    # - services/prowlarr
+    # - services/bazarr
+    # - services/jellyfin
+    # - services/ombi
+    # - services/overseerr

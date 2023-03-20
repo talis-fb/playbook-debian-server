@@ -18,3 +18,5 @@
     - services/prowlarr
     - services/bazarr
     - services/jellyfin
+    - services/ombi
+    - services/overseerr
