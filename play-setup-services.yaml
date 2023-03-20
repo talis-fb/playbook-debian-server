@@ -2,6 +2,9 @@
 - name: Here we go...
   hosts: homelab
 
+  vars:
+    ansible_user: "{{ lookup('env', 'USERNAME') }}"
+
   roles:
     - services/setup
     - services/portainer

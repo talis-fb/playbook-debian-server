@@ -1,0 +1,4 @@
+.env
+
+# Roles downloads by ansible-galaxy
+roles/*.*

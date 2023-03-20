@@ -2,6 +2,7 @@
 roles:
   - name: geerlingguy.security
   - name: geerlingguy.docker
+  - name: artis3n.tailscale
 collections:
   - name: community.docker
   - name: community.general
