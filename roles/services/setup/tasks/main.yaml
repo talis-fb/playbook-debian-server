@@ -52,7 +52,7 @@
     owner: "{{ username }}"
     group: "{{ username }}"
     state: directory
-  loop: "{{ services }}"
+  loop: "{{ services_names }}"
 
 - name: Make sure that the services - services folders exists
   ansible.builtin.file:
@@ -60,4 +60,4 @@
     owner: "{{ username }}"
     group: "{{ username }}"
     state: directory
-  loop: "{{ services }}"
+  loop: "{{ services_names }}"

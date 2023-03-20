@@ -1,0 +1,38 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/services
+
+
+{# Set service to not use here, because had special edition #}
+{% set exclude_services = ['homepage', 'qbittorrent'] %}
+{% set services_to_show = services | rejectattr('name', 'in', exclude_services) %}
+
+
+
+- Settings:
+{% for service in services_to_show | selectattr('type', 'equalto', 'system-admin') %}
+    - {{ service.title }}:
+        href: https://{{ host }}:{{ service.port }}/
+        icon: {{ service.name }}.png
+        container: {{ service.name }}
+{% endfor %}
+
+
+
+- Media:
+    - Qbittorrent:
+        href: http://{{ host }}:13000/
+        icon: qbittorrent.png
+        container: qbittorrent
+        widget:
+            type: qbittorrent
+            url: http://{{ host }}:13000
+            username: admin
+            password: adminadmin
+
+{% for service in services_to_show | selectattr('type', 'equalto', 'media') %}
+    - {{ service.title }}:
+        href: http://{{ host }}:{{ service.port }}/
+        icon: {{ service.name }}.png
+        container: {{ service.name }}
+{% endfor %}

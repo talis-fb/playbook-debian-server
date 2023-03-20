@@ -7,6 +7,8 @@ timezone: America/Recife
 
 home_dir: "/home/{{ username }}"
 
+host: "192.168.1.18"
+
 #
 # Docker apps
 #
@@ -42,20 +44,6 @@ extra_packages:
   - neovim
   - ranger
 
-#
-# Services
-#
-services:
-  - portainer
-  - heimdall
-  - homepage
-  - qbittorrent
-  - radarr
-  - sonarr
-  - jellyfin
-  - prowlarr
-  - bazarr
-
 
 #
 # MEDIA SERVICES
@@ -66,6 +54,69 @@ media_dir:     /media
 download_dir:  /media/torrents
 movie_dir:     /media/streaming/movies
 tv_dir:        /media/streaming/tv
+
+#
+# Services
+#
+services:
+  # System-admin --------------
+  - title: Portainer
+    name: portainer
+    port: 9443
+    type: system-admin
+
+  - title: Cockpit
+    name: cockpit
+    port: 9090
+    type: system-admin
+
+  - title: Homepage
+    name: homepage
+    port: 3000
+    type: system-admin
+
+  # Media ---------------------
+  - title: Qbittorrent
+    name: qbittorrent
+    port: 13000
+    type: media
+
+  - title: Jellyfin
+    name: jellyfin
+    port: 8096
+    type: media
+
+  - title: Ombi
+    name: ombi
+    port: 3579
+    type: media
+
+  - title: Overseerr
+    name: overseerr
+    port: 5055
+    type: media
+
+  - title: Radarr
+    name: radarr
+    port: 7878
+    type: media
+
+  - title: Sonarr
+    name: sonarr
+    port: 8989
+    type: media
+
+  - title: Prowlarr
+    name: prowlarr
+    port: 9696
+    type: media
+
+  - title: Bazarr
+    name: bazarr
+    port: 6767
+    type: media
+
+services_names: "{{ services | map(attribute='name') }}"
 
 
 #

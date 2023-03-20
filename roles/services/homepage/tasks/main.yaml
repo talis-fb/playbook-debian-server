@@ -11,10 +11,10 @@
     group: "{{ username }}"
     state: directory
 
-- name: Copy configurations
-  copy:
+- name: Copy configurations files
+  template:
     src: "{{ item }}"
-    dest: "{{ docker_services_dir }}/homepage/config/{{ item | basename }}"
+    dest: "{{ docker_services_dir }}/homepage/config/{{ item | basename | replace('.j2', '') }}"
   with_fileglob:
     - "{{ containers_config_dir }}/homepage/config/*"
 
