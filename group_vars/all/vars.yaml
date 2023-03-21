@@ -86,13 +86,8 @@ services:
     port: 8096
     type: media
 
-  - title: Ombi
-    name: ombi
-    port: 3579
-    type: media
-
-  - title: Overseerr
-    name: overseerr
+  - title: Jellyseerr
+    name: jellyseerr
     port: 5055
     type: media
 

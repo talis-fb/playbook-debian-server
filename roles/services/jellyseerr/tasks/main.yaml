@@ -1,17 +1,17 @@
 ---
 - name: Copy compose file
   template:
-    src: "{{ containers_config_dir }}/overseerr/docker-compose.yaml.j2"
-    dest: "{{ docker_compose_dir }}/overseerr/docker-compose.yaml"
+    src: "{{ containers_config_dir }}/jellyseerr/docker-compose.yaml.j2"
+    dest: "{{ docker_compose_dir }}/jellyseerr/docker-compose.yaml"
 
 - name: Make sure that the config folders exists
   ansible.builtin.file:
-    path: "{{ docker_services_dir }}/overseerr/config"
+    path: "{{ docker_services_dir }}/jellyseerr/config"
     owner: "{{ username }}"
     group: "{{ username }}"
     state: directory
 
 - name: Setup compose file
   docker_compose:
-    project_src: "{{ docker_compose_dir }}/overseerr"
+    project_src: "{{ docker_compose_dir }}/jellyseerr"
     state: present
